@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[margin = 1in]{geometry}
+\usepackage{setspace}
+\singlespace
+\setlength{\parindent}{4ex}
+% \setlength{\parskip}{1em}
+
+\usepackage{blindtext}
+
+% \newcounter{example}[section]
+% \newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+%    \textbf{Example~\theexample. #1} \rmfamily}{\medskip}
+
+\renewcommand\thesection{\hspace{-1em}}
+\newcounter{quescount}
+% \newcommand\question{\refstepcounter{quescount}\section{Question~\thequescount}}
+% \newcommand\custquestion[1]{\section{Question {#1}}}
+\newcommand\question[1][\thequescount]{\refstepcounter{quescount}\section{Question~{#1}}}
+\newcounter{subquescount}[section]
+\newcommand\subquestion{\refstepcounter{subquescount}\subsection*{(\alph{subquescount})}\par}
+
+\title{Assignment Template}     %Title
+\author{Apeiron}                %Author
+\date{\today}                   %Date
+
+\begin{document}
+
+\maketitle
+
+\question
+
+\subquestion
+
+\blindtext[1]
+
+\subquestion
+
+\blindtext[1]
+
+\question[3.17]
+
+\blindtext[1]
+
+\question
+
+% \begin{example}
+% This is the first example. The counter will be reset at each section.
+% \end{example}
+
+
+
+\end{document}
